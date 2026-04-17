@@ -32,14 +32,14 @@ public class Medico extends Pessoa {
         this.especialidade = especialidade;
     }
 
-    // 🔹 Adiciona uma consulta ao médico
+    // Adicionar consulta ao médico
     public void adicionarConsulta(Consulta consulta) {
         if (consulta != null) {
             consultas.add(consulta);
         }
     }
 
-    // 🔹 Lista todas as consultas do médico
+    // Lista todas as consultas do médico
     public void listarConsultas() {
         if (consultas.isEmpty()) {
             System.out.println("Nenhuma consulta cadastrada para o médico " + getNome());
@@ -56,7 +56,7 @@ public class Medico extends Pessoa {
             if (c.getConsulta() != null) {
                 String[] dados = c.getConsulta();
 
-                // [0] = sintomas, [1] = diagnóstico, [2] = tratamento
+                // [0] = sintomas, [1] = observações, [2] = receita
                 if (dados.length > 0) System.out.println("Sintomas: " + dados[0]);
                 if (dados.length > 1) System.out.println("Observações: " + dados[1]);
                 if (dados.length > 2) System.out.println("Receita: " + dados[2]);
@@ -64,7 +64,7 @@ public class Medico extends Pessoa {
         }
     }
 
-    // 🔹 Exibe dados do médico
+    // Exibir dados do médico
     public void exibirDados() {
         System.out.println("===== MÉDICO =====");
         System.out.println("ID: " + idMedico);
